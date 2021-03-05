@@ -54,3 +54,23 @@ spec:
       interval: 30m
 EOF
 ```
+
+## Subscribe to amq7-cert-manager-operator
+
+Subscribe to the AMQ7 CertManager Operator to have it installed cluster-wide:
+
+```
+oc apply -f - <<EOF
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: amq7-cert-manager
+  namespace: openshift-operators
+spec:
+  channel: alpha
+  installPlanApproval: Automatic
+  name: amq7-cert-manager-operator
+  source: redhat-operators-stf
+  sourceNamespace: openshift-marketplace
+EOF
+```
