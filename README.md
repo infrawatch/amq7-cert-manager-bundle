@@ -1,6 +1,9 @@
 # amq7-cert-manager-bundle
 
-NOTE:: You must use `docker` because there are issues with `podman` and the incorrect manifest version in the container metadata.
+---
+**NOTE**
+You must use `docker` because there are issues with `podman` and the incorrect manifest version in the container metadata.
+----
 
 Build the bundle.
 
