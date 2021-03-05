@@ -7,6 +7,10 @@ You must use `docker` because there are issues with `podman` and the incorrect m
 
 ----
 
+## Building Bundle and Index Image
+
+Skip to **Enabling redhat-operators-stf CatalogSource** below if you don't need to update/build the bundle and index image.
+
 Build the bundle.
 
 ```
@@ -28,6 +32,8 @@ Update the index image in quay.io:
 ```
 docker push quay.io/redhat-operators-stf/stf-catalog:v4.6
 ```
+
+## Enabling redhat-operators-stf CatalogSource
 
 Install a custom `CatalogSource` in OpenShift:
 
